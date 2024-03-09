@@ -1,0 +1,28 @@
+.about{
+    margin: 17vh 4vw 3vh 10vw;
+}
+.about-container .heading{
+    margin: 10px 20px;
+}
+.about-container .heading h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+.content{
+    margin: 20px 40px;
+    padding: 10px 20px;
+}
+.content p{
+   font-size: 20px;
+   font-weight: 450;
+}
+@media (max-width:768px) {
+    .about-container .heading h1{
+        font-size: 30px;
+        
+    }
+    .content p{
+        font-size: 16px;
+        font-weight: 450;
+     }
+}

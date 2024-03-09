@@ -1,0 +1,16 @@
+.projects{
+    margin: 20vh 2vw 3vh 10vw;
+}
+.projects h1{
+    font-size:80px ;
+    margin: 10px;
+    font-weight: 500;
+}
+.projects-item{
+    margin: 30px 50px;
+}
+@media (max-width:768px) {
+    .projects h1{
+        font-size:60px ;
+    }
+}

@@ -1,0 +1,52 @@
+.navbar {
+  padding: 15px 10px;
+  margin: 0px 15px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.nav-profile {
+  display: flex;
+  gap: 20px;
+}
+.nav-profile p {
+  font-size: 36px;
+  font-weight: 800;
+}
+.nav-item {
+  padding: 20px 0px;
+  width: 1vw;
+  position: fixed;
+}
+.nav-item ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item ul li {
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 23px 0px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+.nav-item ul li:hover {
+  font-weight: 500;
+  scale: .96;
+}
+.nav-item .active {
+  font-weight: 500;
+  scale: .96;
+}
+@media (max-width: 800px) {
+  .nav-profile p {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .nav-item ul li {
+    font-size: 13px;
+  }
+}

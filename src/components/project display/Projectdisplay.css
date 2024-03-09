@@ -1,0 +1,80 @@
+.projectdisplay{
+    margin: 40px 10px;
+    max-width: 1200px;
+}
+.projectdisplay-header a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    text-decoration: underline;
+}
+.projectdisplay-header a h3, .projectdisplay-header a img{
+    font-size: 40px;
+    margin: 0px 0px 20px 0px;
+}
+.projectdisplay-header p{
+    font-size: 20px;
+    font-weight: 450;
+}
+.projectdisplay-btn{
+    margin: 30px 0px 10px 10px;
+    display: flex;
+    gap: 30px;
+}
+.projectdisplay-btn a{
+    text-decoration: none;
+}
+.projectdisplay-btn button{
+    width: 150px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 550;
+    background: transparent;
+    border-radius: 5px;
+}
+.projectdisplay-btn button:hover{
+    background: black;
+    color: #fefef0;
+}
+.project-images-container{
+    display: flex;
+    gap: 20px;
+    padding: 30px 0px;
+}
+.project-images-column{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 40px;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.image img:hover{
+   scale: 1.1;
+}
+@media (max-width:768px) {
+    .project-images-column{
+        flex-direction: column; 
+    }
+    .projectdisplay-header a h3, .projectdisplay-header a img{
+        font-size: 30px;
+    }
+    .projectdisplay-header p{
+        font-size: 15px;
+    }
+    .image img:hover{
+        scale: 1;
+     }
+     .projectdisplay-btn button{
+        width: 90px;
+        padding: 5px;
+        font-size: 17px;
+    }
+}

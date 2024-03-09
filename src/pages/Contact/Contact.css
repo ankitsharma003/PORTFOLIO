@@ -64,7 +64,7 @@
 }
 @media (max-width:1000px) {
     .contact{
-        margin: 17vh 4vw 0vh 10vw;
+        margin: 7vh 4vw 3vh 10vw;
         display: grid;
     }
     .contact-right{
@@ -78,7 +78,7 @@
     }
     .contact-form{
         padding:7px 30px;
-        max-width: 350px;
+        max-width: 60vw;
     }
     .contact-form .contact-input{
         padding: 15px;

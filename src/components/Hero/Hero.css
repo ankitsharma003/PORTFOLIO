@@ -16,8 +16,14 @@
 }
 .hero-left-side .social-media {
   display: flex;
-  gap: 20px;
-  margin: 10px 0px;
+  gap: 15px;
+  margin: 10px 0px; 
+}
+.hero-left-side .social-media img:hover {
+ transition: 0.1s ease-in-out;
+}
+.hero-left-side .social-media img:hover {
+  scale: 1.2;
 }
 .hero-left-side .languages {
   display: flex;

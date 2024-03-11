@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import gitimg from "../../assets/github.png";
 import linkdinimg from "../../assets/linkedin.png";
 import instaimg from "../../assets/instagram.png";
 import mailimg from "../../assets/gmail.png";
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const onSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
     event.preventDefault();
     const formData = new FormData(event.target);
 
@@ -22,6 +25,7 @@ const Contact = () => {
       },
       body: json,
     }).then((res) => res.json());
+    setLoading(false);
 
     if (res.success) {
       console.log("Success", res);
@@ -35,53 +39,64 @@ const Contact = () => {
       <div className="contact-form-container">
         <h1>Get In Touch</h1>
         <hr />
-        <form
-          action=""
-          method="POST"
-          onSubmit={onSubmit}
-          className="contact-form"
-        >
-          <input
-            type="text"
-            className="contact-input"
-            name="name"
-            required
-            placeholder="YOUR name"
-          />
-          <input
-            type="email"
-            className="contact-input"
-            name="email"
-            required
-            placeholder="YOUR Email"
-          />
-          <textarea
-            name="message"
-            className="contact-input"
-            required
-            placeholder="YOUR Message"
-          />
-          <button type="submit">Submit</button>
-        </form>
+        {loading ? (
+          <div className="loding-animation">Sending...</div>
+        ) : (
+          <form
+            action=""
+            method="POST"
+            onSubmit={onSubmit}
+            className="contact-form"
+          >
+            <input
+              type="text"
+              className="contact-input"
+              name="name"
+              required
+              placeholder="YOUR name"
+            />
+            <input
+              type="email"
+              className="contact-input"
+              name="email"
+              required
+              placeholder="YOUR Email"
+            />
+            <textarea
+              name="message"
+              className="contact-input"
+              required
+              placeholder="YOUR Message"
+            />
+            <button type="submit">Send</button>
+          </form>
+        )}
       </div>
       <div className="contact-right">
         <h3>Contact Details</h3>
         <div className="social-info">
-          <a href="" target="_blank">
-            <img src={linkdinimg} width={"25px"} alt="" /> @ankitsharma003
+          <a
+            href="https://www.linkedin.com/in/ankit-sharma-515a842b9/"
+            target="_blank"
+          >
+            <img src={linkdinimg} width={"25px"} alt="" /> <p>Ankit Sharma</p>
           </a>
         </div>{" "}
         <div className="social-info">
           <a href="https://github.com/ankitsharma003" target="_blank">
-            <img src={gitimg} width={"25px"} alt="" /> @ankitsharma003
+            <img src={gitimg} width={"25px"} alt="" /> <p>@ankitsharma003</p>
           </a>
         </div>{" "}
         <div className="social-info">
-          <img src={mailimg} width={"25px"} alt="" /> jdka03@gmail.com
+          <a href="mailto:ankkiit7@gmail.com">
+            <img src={mailimg} width={"25px"} alt="" />{" "}
+            <p> ankkiit7@gmail.com</p>
+          </a>
         </div>
         <div className="social-info">
-          <a href="#" target="_blank">
-            <img src={instaimg} width={"25px"} alt="" /> ankitsharma003
+          <a href="https://www.instagram.com/_ankkit7/" target="_blank">
+            <img src={instaimg} width={"25px"} alt="" /> 
+            <p> @_ankkit7</p>
           </a>
         </div>
       </div>

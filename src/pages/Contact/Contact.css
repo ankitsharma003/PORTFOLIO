@@ -60,7 +60,21 @@
 }
 .contact-right .social-info a{
    color: black;
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
    text-decoration: none;
+}
+.loding-animation{
+    width: 100vw ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-size: 50px;
+
+
 }
 @media (max-width:1000px) {
     .contact{

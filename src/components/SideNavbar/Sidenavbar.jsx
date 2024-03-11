@@ -7,6 +7,7 @@ const Sidenavbar = () => {
 
   const handleNavClick = (navItem) => {
     setActiveNav(navItem);
+    window.scrollTo(0, 0);
   };
 
   return (

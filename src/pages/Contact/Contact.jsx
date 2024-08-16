@@ -76,7 +76,7 @@ const Contact = () => {
         <h3>Contact Details</h3>
         <div className="social-info">
           <a
-            href="https://www.linkedin.com/in/ankit-sharma-515a842b9/"
+            href="https://www.linkedin.com/in/ankit-sharma-886b3b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
             target="_blank"
           >
             <img src={linkdinimg} width={"25px"} alt="" /> <p>Ankit Sharma</p>

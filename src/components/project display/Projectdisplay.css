@@ -18,6 +18,12 @@
     font-size: 20px;
     font-weight: 450;
 }
+.read-more-link{
+    font-size: 23px;
+    font-weight: 600;
+    cursor: pointer;
+    color: blueviolet;
+}
 .projectdisplay-btn{
     margin: 30px 0px 10px 10px;
     display: flex;
@@ -68,6 +74,10 @@
     }
     .projectdisplay-header p{
         font-size: 15px;
+    }
+    .read-more-link{
+        font-size: 16px;
+        font-weight: 500;
     }
     .image img:hover{
         scale: 1;

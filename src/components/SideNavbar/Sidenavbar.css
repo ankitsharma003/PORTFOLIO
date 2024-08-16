@@ -41,7 +41,7 @@
   font-weight: 500;
   scale: .96;
 }
-@media (max-width: 800px) {
+@media (max-width: 800px) {   
   .nav-profile p {
     font-size: 26px;
     font-weight: 500;

@@ -24,7 +24,10 @@ const Hero = () => {
           </p>
         </div>
         <div className="social-media">
-          <a href="https://github.com/ankitsharma003" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/ankit-sharma-886b3b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+            target="_blank"
+          >
             <img src={gitimg} width={"25px"} alt="" />
           </a>
           <a
@@ -41,7 +44,7 @@ const Hero = () => {
           </a>
         </div>
         <div className="languages">
-          <p>Tech Stock:</p>
+          <p>Tech Stack:</p>
           <img src={htmlimg} alt="" />
           <img src={cssimg} alt="" />
           <img src={jsimg} alt="" />

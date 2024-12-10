@@ -1,7 +1,9 @@
 .hero {
   display: flex;
   margin: 20vh 15vw;
+  
 }
+
 .hero-left-side {
   width: 100%;
   max-width: 500px;

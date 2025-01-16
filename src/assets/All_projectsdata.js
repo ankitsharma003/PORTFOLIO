@@ -12,21 +12,21 @@ import qr_phone from "../assets/qr-phone.png";
 import to_do_web from "../assets/to-do-web.png";
 import to_do_tab from "../assets/to-do-tab.png";
 import password_web from "../assets/password-web.png";
-import TechSchool_img from "../assets/trechSchool_img.png";
-import TechSchool_img_2 from "../assets/techScool_img2.png";
-import TechSchool_img_3 from "../assets/texhSchool_img3.png";
+import CourseHub_img from "../assets/trechSchool_img.png";
+import CourseHub_img_2 from "../assets/techScool_img2.png";
+import CourseHub_img_3 from "../assets/texhSchool_img3.png";
 
 export const All_projectsdata = [
   {
     id: 1,
-    name: "TechSchool",
-    image: TechSchool_img,
-    img1: TechSchool_img_2,
-    img2: TechSchool_img_3,
+    name: "CourseHub",
+    image: CourseHub_img,
+    img1: CourseHub_img_2,
+    img2: CourseHub_img_3,
     description:
-      "TechSchool is an interactive platform designed to showcase and manage technical courses. Built with ReactJS, it offers a smooth and responsive user experience, allowing users to browse courses, search for topics, and engage with a modern UI.",
-    link: "https://teach-school.vercel.app/",
-    gitlink: "https://github.com/ankitsharma003/TeachSchool",
+      "CourseHub is an interactive platform designed to showcase and manage technical courses. Built with ReactJS, it offers a smooth and responsive user experience, allowing users to browse courses, search for topics, and engage with a modern UI.",
+    link: "https://course-hub-indol.vercel.app/",
+    gitlink: "https://github.com/ankitsharma003/CourseHub",
   },
   {
     id: 2,

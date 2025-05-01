@@ -1,0 +1,154 @@
+.theme-switcher {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 998;
+}
+
+.theme-toggle-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-button:hover::before {
+  opacity: 0.1;
+}
+
+.toggle-icons {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  will-change: transform;
+}
+
+.sun-icon {
+  color: #f59e0b;
+}
+
+.moon-icon {
+  color: #3b82f6;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --accent-color: #93c5fd;
+  --text-dark: #f1f5f9;
+  --text-light: #cbd5e1;
+  --background-light: #0f172a;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
+    0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .App {
+  background-color: var(--background-light);
+}
+
+.dark-mode .hero,
+.dark-mode .projectdisplay,
+.dark-mode .about-container,
+.dark-mode .contact-form {
+  background-color: #1e293b;
+}
+
+.dark-mode .navbar {
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark-mode .theme-toggle-button {
+  background: #1e293b;
+}
+
+.dark-mode .nav-link {
+  color: var(--text-light);
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: var(--text-light);
+}
+
+.dark-mode .contact-form label {
+  color: var(--text-light);
+}
+
+/* Adding styles for contact form container and success message */
+.dark-mode .contact-form-container,
+.dark-mode .contact-right {
+  background-color: #1e293b;
+  box-shadow: var(--shadow-lg);
+}
+
+.dark-mode .contact-form-container h2,
+.dark-mode .contact-right h3,
+.dark-mode .success-message h3 {
+  color: var(--text-dark);
+}
+
+.dark-mode .contact-subtitle,
+.dark-mode .success-message p,
+.dark-mode .social-info p {
+  color: var(--text-light);
+}
+
+.dark-mode .projectdisplay::before,
+.dark-mode .about-container::before {
+  background: var(--gradient-primary);
+}
+
+.dark-mode .code-button {
+  background: #334155;
+  color: var(--text-light);
+  border-color: #475569;
+}
+
+@media (max-width: 768px) {
+  .theme-switcher {
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .theme-toggle-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .toggle-icons {
+    font-size: 1.25rem;
+  }
+}

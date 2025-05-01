@@ -1,0 +1,130 @@
+.floating-action-button-container {
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  z-index: 997;
+}
+
+.fab-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: white;
+  font-size: 1.3rem;
+  z-index: 1001;
+  position: relative;
+}
+
+.fab-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5), 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fab-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.fab-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.fab-menu {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 200px;
+  transform-origin: bottom right;
+}
+
+.fab-menu-items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.fab-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.fab-item:active {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.fab-item:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.fab-item svg {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.fab-item span {
+  font-size: 0.95rem;
+}
+
+/* Dark mode styles */
+.dark-mode .fab-menu {
+  background-color: #1e293b;
+}
+
+.dark-mode .fab-item {
+  color: #f1f5f9;
+}
+
+.dark-mode .fab-item:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode .fab-button {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .fab-button:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Add a safe area margin for mobile devices */
+@supports (padding: max(0px)) {
+  .floating-action-button-container {
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-action-button-container {
+    bottom: 140px;
+    right: 20px;
+    display: block; /* Show on mobile/tablet */
+  }
+}

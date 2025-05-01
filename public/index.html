@@ -50,6 +50,30 @@
     <!-- Disable FLoC - Privacy Enhancement -->
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
+    <!-- Prevent Flash of Unstyled Content (FOUC) with Dark Mode -->
+    <script>
+      (function () {
+        // Check if user has previously set a theme preference
+        var savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark-mode");
+          document.body.classList.add("dark-mode");
+        } else if (savedTheme === "light") {
+          document.documentElement.classList.remove("dark-mode");
+          document.body.classList.remove("dark-mode");
+        } else if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          // Use system preference as fallback
+          document.documentElement.classList.add("dark-mode");
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        }
+      })();
+    </script>
+
     <title>Ankit Sharma | Front-End Developer</title>
   </head>
   <body>

@@ -1,40 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { FaSun, FaMoon } from "react-icons/fa";
 import "./ThemeSwitcher.css";
+import useDarkMode from "../../hooks/useDarkMode";
 
 const ThemeSwitcher = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Initialize theme from localStorage or system preference
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark-mode");
-    } else if (savedTheme === "light") {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove("dark-mode");
-    } else if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      // Use system preference if no saved theme
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark-mode");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    if (!isDarkMode) {
-      document.documentElement.classList.add("dark-mode");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark-mode");
-      localStorage.setItem("theme", "light");
-    }
-  };
+  const [isDarkMode, toggleDarkMode] = useDarkMode();
 
   return (
     <motion.div
@@ -45,7 +16,7 @@ const ThemeSwitcher = () => {
     >
       <motion.button
         className="theme-toggle-button"
-        onClick={toggleTheme}
+        onClick={toggleDarkMode}
         whileTap={{ scale: 0.9 }}
         aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
       >

@@ -8,6 +8,10 @@
   overflow: hidden;
   position: relative;
   will-change: transform;
+  width: calc(100% - 2rem);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projectdisplay:hover {
@@ -373,8 +377,9 @@
 
 @media (max-width: 768px) {
   .projectdisplay {
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    width: calc(100% - 2rem);
   }
 
   .project-title h3 {
@@ -386,50 +391,61 @@
   }
 
   .projectDescription p {
-    padding-left: 0.5rem;
+    padding-left: 0.75rem;
   }
 
   .projectdisplay-btn {
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
   }
 
   .project-button {
     width: 100%;
     justify-content: center;
-    padding: 0.7rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
   }
 
   .thumbnail {
-    width: calc(50% - 0.4rem);
+    height: 50px;
+    width: 60px;
   }
 
   .nav-button {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 
   .main-image {
-    aspect-ratio: auto;
-    height: 250px;
+    max-height: 250px;
   }
 }
 
 @media (max-width: 480px) {
+  .projectdisplay {
+    padding: 1.25rem;
+    margin: 1.5rem auto;
+    width: calc(100% - 1.5rem);
+  }
+
   .thumbnail {
-    width: 100%;
-    margin-bottom: 0.5rem;
+    height: 40px;
+    width: 50px;
   }
 
   .main-image {
-    height: 200px;
+    max-height: 200px;
   }
 
   .project-title {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+
+  .project-title h3 {
+    font-size: 1.5rem;
   }
 }
 

@@ -208,10 +208,7 @@ const About = () => {
                     <SiReactrouter className="skill-icon" />
                     <span>React Router</span>
                   </motion.li>
-                  <motion.li variants={skillBadgeVariants} whileHover="hover">
-                    <SiRedux className="skill-icon" />
-                    <span>Redux</span>
-                  </motion.li>
+
                   <motion.li variants={skillBadgeVariants} whileHover="hover">
                     <SiTailwindcss className="skill-icon" />
                     <span>Tailwind CSS</span>
@@ -247,14 +244,6 @@ const About = () => {
                     <SiGit className="skill-icon" />
                     <span>Git/GitHub</span>
                   </motion.li>
-                  <motion.li variants={skillBadgeVariants} whileHover="hover">
-                    <SiFigma className="skill-icon" />
-                    <span>Figma</span>
-                  </motion.li>
-                  <motion.li variants={skillBadgeVariants} whileHover="hover">
-                    <SiJest className="skill-icon" />
-                    <span>Jest</span>
-                  </motion.li>
                 </motion.ul>
               </div>
             </div>
@@ -276,16 +265,19 @@ const About = () => {
           </div>
           <div className="content">
             <p>
-              I hold a Bachelor's degree in Computer Science, which provided me
-              with a strong foundation in programming concepts, algorithms, and
-              software development principles.
+              I'm a third-year Computer Science student with a specialization in
+              Artificial Intelligence and Machine Learning (AIML). My academic
+              background has provided me with a strong foundation in programming
+              concepts, algorithms, and software development principles.
             </p>
             <p>
-              Beyond formal education, I'm committed to continuous learning
-              through online courses, documentation, and building projects. I
-              actively participate in web development communities and stay
-              updated with the latest industry trends and best practices.
+              Beyond formal education, I am committed to continuous learning
+              through online courses, reading documentation, and building
+              hands-on projects. I actively engage with web development and
+              AI/ML communities, staying up to date with the latest industry
+              trends and best practices.
             </p>
+
             <div className="achievements-grid">
               <div className="achievement-item">
                 <FaMedal className="achievement-icon" />
@@ -311,7 +303,6 @@ const About = () => {
                   Next.js for server-side rendering and static site generation
                 </li>
                 <li>Modern CSS techniques (Grid, Flexbox, CSS variables)</li>
-                <li>Web accessibility standards (WCAG)</li>
               </ul>
             </div>
           </div>
